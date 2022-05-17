@@ -44,7 +44,7 @@ jobs:
         DBPORT: ${{ job.services.mysql.ports[3306] }}
     - name: Run Tests
       run: |
-        python3 manage.py test
+        python3 manage.py runserver 0.0.0.0:80
       env: 
         DBENGINE: django.db.backends.mysql
         DBNAME: deploydb
